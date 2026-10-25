@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     SEO & SOCIAL
+     Site URL: https://uzmanali22.github.io/portfolio/ (used in canonical, og:url,
+     og:image, twitter:image and JSON-LD). Update all of them if you move to a custom domain.
+     ============================================================ -->
+<title>Uzman Ali | Implantable Antennas &amp; Bio-electromagnetics, Tampere University</title>
+<meta name="description" content="Uzman Ali is a PhD candidate at Tampere University researching safe, miniaturized implantable antennas, implant-to-implant wireless links and SAR/thermal safety for biomedical devices.">
+<meta name="author" content="Uzman Ali">
+<link rel="canonical" href="https://uzmanali22.github.io/portfolio/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Uzman Ali | Implantable antennas &amp; bio-electromagnetics">
+<meta property="og:description" content="PhD candidate at Tampere University designing safe, miniaturized wireless links for implantable medical devices.">
+<meta property="og:url" content="https://uzmanali22.github.io/portfolio/">
+<meta property="og:image" content="https://uzmanali22.github.io/portfolio/photo.jpg">
+<meta property="profile:first_name" content="Uzman">
+<meta property="profile:last_name" content="Ali">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Uzman Ali | Implantable antennas &amp; bio-electromagnetics">
+<meta name="twitter:description" content="PhD candidate at Tampere University designing safe, miniaturized wireless links for implantable medical devices.">
+<meta name="twitter:image" content="https://uzmanali22.github.io/portfolio/photo.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E5E6F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EUA%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Uzman Ali",
+  "jobTitle": "Doctoral Researcher",
+  "description": "PhD candidate researching implantable antennas, implant-to-implant communication and RF safety for biomedical devices.",
+  "url": "https://uzmanali22.github.io/portfolio/",
+  "image": "https://uzmanali22.github.io/portfolio/photo.jpg",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Tampere University",
+    "department": { "@type": "Organization", "name": "Faculty of Information Technology and Communication Sciences" }
+  },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Tampere University" },
+  "knowsAbout": ["Implantable antennas", "Bio-electromagnetics", "Implant-to-implant communication", "Specific absorption rate (SAR)", "Electromagnetic simulation", "Antenna measurements"],
+  "sameAs": [
+    "https://orcid.org/0009-0001-4804-506X",
+    "https://scholar.google.com/citations?user=Hd5RaC4AAAAJ&hl=en",
+    "https://www.researchgate.net/profile/Uzman-Ali-2",
+    "https://researchportal.tuni.fi/en/persons/uzman-ali/",
+    "https://ieeexplore.ieee.org/author/219854431907765",
+    "https://www.linkedin.com/in/uzman-ali22/",
+    "https://github.com/uzmanali22"
+  ]
+}
+</script>
+
+<!-- Theme is applied before first paint to avoid a flash -->
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') d.setAttribute('data-theme', t); } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --bg: #FAF9F6;
+  --surface: #FFFFFF;
+  --ink: #14202E;
+  --muted: #5B6676;
+  --border: #E3E1DB;
+  --primary: #0E5E6F;
+  --primary-soft: #E6F0F1;
+  --accent: #B8642F;        /* copper: icons and decorative marks only */
+  --accent-text: #94491A;   /* darker copper for small text (AA on bg and surface) */
+  --on-primary: #FFFFFF;
+  --shadow: 0 6px 22px rgba(20, 32, 46, .08);
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-1: 2.75rem; --fs-2: 2rem; --fs-3: 1.5rem; --fs-4: 1.2rem; --fs-5: 1rem; --fs-6: .85rem;
+  --radius: 10px;
+  --maxw: 1080px;
+  --gutter: 16px;
+  --nav-h: 64px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F151C; --surface: #161E27; --ink: #E8ECF0; --muted: #9AA6B2;
+    --border: #26313D; --primary: #5FB3C2; --primary-soft: #1B2D34;
+    --accent: #E0925C; --accent-text: #E0925C; --on-primary: #0F151C;
+    --shadow: 0 6px 22px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F151C; --surface: #161E27; --ink: #E8ECF0; --muted: #9AA6B2;
+  --border: #26313D; --primary: #5FB3C2; --primary-soft: #1B2D34;
+  --accent: #E0925C; --accent-text: #E0925C; --on-primary: #0F151C;
+  --shadow: 0 6px 22px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 17px; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--sans); font-size: 1rem; line-height: 1.65;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.2; margin: 0 0 .5em; letter-spacing: -.01em; }
+h1 { font-size: var(--fs-1); }
+h2 { font-size: var(--fs-2); }
+h3 { font-size: var(--fs-4); }
+p { margin: 0 0 1em; }
+a { color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+img { max-width: 100%; height: auto; display: block; }
+ul, ol { padding-left: 1.2em; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; border-radius: 4px; }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+.prose { max-width: 70ch; }
+.mono { font-family: var(--mono); font-size: var(--fs-6); letter-spacing: .04em; }
+.muted { color: var(--muted); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.todo { font-family: var(--mono); font-size: .8em; color: var(--accent-text); background: var(--primary-soft); padding: 0 .35em; border-radius: 4px; }
+
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: var(--primary); color: var(--on-primary); padding: 10px 16px; border-radius: 8px; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+@supports not (background: color-mix(in srgb, red 50%, blue)) { .site-header { background: var(--bg); } }
+.nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 16px; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 6px; }
+.nav-links { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.nav-links a {
+  display: block; padding: 6px 10px; border-radius: 6px; color: var(--muted);
+  text-decoration: none; font-size: .9rem; font-weight: 500;
+}
+.nav-links a:hover { color: var(--ink); background: var(--primary-soft); }
+.nav-links a.active { color: var(--primary); background: var(--primary-soft); }
+.icon-btn {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.icon-btn:hover { border-color: var(--primary); color: var(--primary); }
+.icon-btn svg { width: 18px; height: 18px; }
+.menu-btn { display: none; }
+.theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+}
+
+@media (max-width: 960px) {
+  .menu-btn { display: inline-grid; }
+  .nav-links {
+    display: none; position: absolute; left: 0; right: 0; top: var(--nav-h);
+    flex-direction: column; gap: 0; padding: 8px var(--gutter) 16px;
+    background: var(--bg); border-bottom: 1px solid var(--border); box-shadow: var(--shadow);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 10px; font-size: 1rem; }
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section { padding: 72px 0; }
+section + section { border-top: 1px solid var(--border); }
+.section-head { margin-bottom: 32px; }
+.eyebrow { display: block; font-family: var(--mono); font-size: var(--fs-6); letter-spacing: .12em; text-transform: uppercase; color: var(--primary); margin-bottom: 8px; }
+.section-head p { color: var(--muted); max-width: 70ch; margin: 0; }
+@media (max-width: 640px) {
+  section { padding: 52px 0; }
+  :root { --fs-1: 2.2rem; --fs-2: 1.7rem; }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: 64px 0 72px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 260px; gap: 56px; align-items: center; }
+.hero h1 { margin-bottom: .25em; }
+.tagline { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: var(--fs-3); line-height: 1.35; color: var(--ink); margin: 0 0 22px; max-width: 30ch; }
+.title-block { list-style: none; padding: 0; margin: 0 0 22px; color: var(--muted); font-size: .95rem; }
+.title-block li { margin: 2px 0; }
+.title-block strong { color: var(--ink); font-weight: 500; }
+.hero-photo {
+  width: 260px; aspect-ratio: 1; border-radius: 18px; object-fit: cover;
+  border: 1px solid var(--border); background: var(--primary-soft);
+}
+.photo-ph { display: grid; place-items: center; font-family: var(--mono); font-size: var(--fs-6); color: var(--muted); }
+@media (max-width: 760px) {
+  .hero { padding: 40px 0 52px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-photo { width: 160px; order: -1; }
+}
+
+.profile-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
+.profile-links a {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border); color: var(--ink); background: var(--surface);
+  transition: color .15s, border-color .15s;
+}
+.profile-links a:hover { color: var(--primary); border-color: var(--primary); }
+.profile-links svg { width: 19px; height: 19px; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px;
+  font: 500 .92rem var(--sans); text-decoration: none; cursor: pointer; border: 1px solid transparent;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+.btn svg { width: 16px; height: 16px; }
+.btn-primary { background: var(--primary); color: var(--on-primary); }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--border); }
+.btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+.btn-sm {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 6px;
+  font: 500 .78rem var(--mono); letter-spacing: .03em; text-decoration: none;
+  color: var(--primary); background: transparent; border: 1px solid var(--border); cursor: pointer;
+}
+.btn-sm:hover { border-color: var(--primary); background: var(--primary-soft); }
+
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; }
+.statement { font-size: 1.06rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.chip {
+  font-family: var(--mono); font-size: .76rem; letter-spacing: .02em;
+  background: var(--primary-soft); color: var(--primary); padding: 5px 10px; border-radius: 999px;
+}
+.subhead { font-family: var(--mono); font-size: var(--fs-6); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; font-weight: 500; }
+@media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ---------- News ---------- */
+.news-list { list-style: none; margin: 0; padding: 0; max-width: 820px; }
+.news-list li { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.news-list li:first-child { border-top: 1px solid var(--border); }
+.news-list time { font-family: var(--mono); font-size: var(--fs-6); color: var(--muted); letter-spacing: .05em; padding-top: 3px; }
+.news-list p { margin: 0; }
+.news-list .is-extra { display: none; }
+.news-list.expanded .is-extra { display: grid; }
+.badge-new {
+  display: inline-block; margin-right: 8px; font: 500 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent-text); border: 1px solid currentColor; padding: 0 6px; border-radius: 4px; vertical-align: 2px;
+}
+.news-toggle { margin-top: 18px; }
+@media (max-width: 520px) { .news-list li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  transition: box-shadow .2s, border-color .2s;
+}
+.card:hover { box-shadow: var(--shadow); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } }
+
+/* Research themes */
+.theme-card { display: flex; flex-direction: column; overflow: hidden; }
+.figure-ph {
+  aspect-ratio: 16 / 9; display: grid; place-items: center; text-align: center; padding: 12px;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 10px, color-mix(in srgb, var(--primary) 6%, transparent) 10px 11px),
+    var(--primary-soft);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono); font-size: .74rem; color: var(--muted); letter-spacing: .04em;
+}
+.theme-card img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; border-bottom: 1px solid var(--border); }
+.theme-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.theme-body h3 { margin: 0; }
+.theme-body p { margin: 0; color: var(--muted); font-size: .95rem; }
+.theme-meta { margin-top: auto; font-family: var(--mono); font-size: .76rem; color: var(--primary); letter-spacing: .03em; }
+
+/* Selected publications */
+.pub-card { padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.pub-card .venue { font-family: var(--mono); font-size: .76rem; color: var(--primary); letter-spacing: .04em; }
+.pub-card h3 { font-size: 1.08rem; line-height: 1.35; margin: 0; }
+.pub-card .authors { font-size: .88rem; color: var(--muted); margin: 0; }
+.pub-card .authors strong, .citation strong { color: var(--ink); font-weight: 600; }
+.pub-card .takeaway { font-size: .93rem; margin: 0; }
+.pub-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+.award-badge { display: inline-flex; align-items: center; gap: 5px; font: 500 .74rem var(--mono); color: var(--accent-text); }
+.award-badge svg { width: 14px; height: 14px; color: var(--accent); }
+
+/* All publications */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 28px; }
+.filter-btn {
+  font: 500 .8rem var(--mono); letter-spacing: .03em; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+}
+.filter-btn:hover { color: var(--ink); border-color: var(--primary); }
+.filter-btn[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.filters select {
+  font: 500 .8rem var(--mono); padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink); margin-left: auto;
+}
+.filters label { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.pub-group h3 { font-size: var(--fs-4); margin: 32px 0 12px; display: flex; align-items: baseline; gap: 10px; }
+.pub-group h3 .count { font-family: var(--mono); font-size: .76rem; color: var(--muted); font-weight: 400; }
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-item { display: grid; grid-template-columns: 46px 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.pub-num { font-family: var(--mono); font-size: .8rem; color: var(--muted); padding-top: 3px; }
+.citation { margin: 0 0 8px; font-size: .95rem; }
+.citation em { font-style: italic; }
+.empty-msg { color: var(--muted); font-style: italic; }
+
+/* ---------- Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skill-card { padding: 20px; }
+.skill-card h3 { font-size: 1.05rem; margin-bottom: 12px; }
+.skill-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-card li { font-size: .86rem; border: 1px solid var(--border); padding: 3px 10px; border-radius: 6px; background: var(--bg); }
+@media (max-width: 900px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .skills-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Timeline (experience & education) ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 23px; top: 8px; bottom: 8px; width: 1px; background: var(--border); }
+.tl-item { position: relative; display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding-bottom: 32px; }
+.tl-item:last-child { padding-bottom: 0; }
+.logo {
+  width: 48px; height: 48px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border);
+  display: grid; place-items: center; overflow: hidden; position: relative; z-index: 1;
+  font: 600 .72rem var(--mono); letter-spacing: .02em; color: var(--primary);
+}
+.logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; background: #fff; }
+.tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+.tl-head h3 { margin: 0; font-size: 1.12rem; }
+.tl-org { color: var(--muted); margin: 2px 0 8px; font-size: .95rem; }
+.tl-date { font-family: var(--mono); font-size: var(--fs-6); color: var(--muted); letter-spacing: .04em; white-space: nowrap; }
+.tl-item ul { margin: 0; padding-left: 1.1em; color: var(--ink); font-size: .95rem; }
+.tl-item ul li { margin: 3px 0; }
+.tl-item ul li::marker { color: var(--muted); }
+.tl-detail { font-size: .95rem; margin: 4px 0; }
+.tl-detail .label { font-family: var(--mono); font-size: .76rem; color: var(--muted); letter-spacing: .05em; margin-right: 6px; }
+.projects { margin-top: 36px; padding: 22px; }
+.projects h3 { font-size: 1.05rem; }
+.projects ul { columns: 2; column-gap: 32px; margin: 0; padding-left: 1.1em; font-size: .93rem; }
+.projects li { break-inside: avoid; margin: 3px 0; }
+@media (max-width: 700px) { .projects ul { columns: 1; } }
+
+/* ---------- Awards / teaching ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
+.award-list { list-style: none; margin: 0; padding: 0; }
+.award-list li { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); align-items: start; }
+.award-list svg { width: 16px; height: 16px; color: var(--accent); margin-top: 5px; }
+.award-list .tl-date { padding-top: 3px; }
+.service-block + .service-block { margin-top: 28px; }
+.service-block h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.service-block ul { margin: 0; padding-left: 1.1em; font-size: .95rem; }
+.service-block li { margin: 4px 0; }
+.service-block li::marker { color: var(--muted); }
+
+/* ---------- Contact ---------- */
+.contact-card { padding: 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; }
+.contact-card h3 { font-size: 1.05rem; }
+.contact-card address { font-style: normal; color: var(--muted); }
+.contact-email { font-size: 1.15rem; font-weight: 500; }
+.contact-links { list-style: none; padding: 0; margin: 0; }
+.contact-links li { margin: 6px 0; }
+.contact-links a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.contact-links a:hover span { text-decoration: underline; }
+.contact-links svg { width: 17px; height: 17px; color: var(--muted); }
+@media (max-width: 760px) { .contact-card { grid-template-columns: 1fr; padding: 22px; } }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--border); padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; }
+.footer-inner a { color: var(--muted); }
+.footer-inner a:hover { color: var(--primary); }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+  background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 8px; font-size: .9rem; z-index: 200;
+  transition: opacity .2s, transform .2s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Fade-in on scroll (JS only; disabled for reduced motion) ---------- */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  * { transition: none !important; }
+}
+
+/* ============================================================
+   PRINT: clean one-column CV
+   ============================================================ */
+@media print {
+  :root { --bg: #fff; --surface: #fff; --ink: #000; --muted: #333; --border: #ccc; --primary: #000; --primary-soft: #fff; --accent: #000; --accent-text: #000; }
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+  .site-header, .skip-link, .btn-row, .btn, .btn-sm, .filters, .news-toggle, .figure-ph, .theme-card img,
+  .profile-links, .toast, .pub-actions, .back-top, .hero-photo { display: none !important; }
+  section { padding: 14pt 0; break-inside: auto; }
+  section + section { border-top: 1px solid #ccc; }
+  .hero { padding-top: 0; }
+  .hero-grid, .about-grid, .two-col, .contact-card, .grid-3, .skills-grid { display: block; }
+  .card { border: 0; box-shadow: none; padding: 0; margin-bottom: 10pt; }
+  .card:hover { box-shadow: none; }
+  .news-list .is-extra { display: grid !important; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  .pub-item, .tl-item, .theme-card, .pub-card, .award-list li { break-inside: avoid; }
+  .projects ul { columns: 1; }
+  a { color: #000; text-decoration: none; }
+  .timeline::before { display: none; }
+  .chip { border: 1px solid #999; }
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Hidden SVG icon sprite: icons are monochrome and inherit text color -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 1 9.2l4 2.6V15c0 0 2.6 3 7 3s7-3 7-3v-3.2l2-1.3V17h2V9.2L12 2Zm0 2.4 7.4 4.8L12 14 4.6 9.2 12 4.4Z"/><circle cx="12" cy="19.6" r="2.4" fill="currentColor"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.1" cy="7.3" r="1.15" fill="currentColor"/><path fill="currentColor" d="M7.2 9.6h1.8v7.6H7.2zM10.6 9.6h3c2.5 0 4 1.7 4 3.8s-1.5 3.8-4 3.8h-3V9.6Zm1.8 1.6v4.4h1.1c1.4 0 2.3-.9 2.3-2.2s-.9-2.2-2.3-2.2h-1.1Z"/></symbol>
+  <symbol id="i-rg" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="12" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" font-weight="700" fill="currentColor">RG</text></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3h-15Zm2.9 3.6a1.55 1.55 0 1 1 0 3.1 1.55 1.55 0 0 1 0-3.1ZM6.1 10.6h2.6v7.8H6.1v-7.8Zm4.2 0h2.5v1.1c.4-.7 1.3-1.3 2.6-1.3 2.7 0 3.1 1.7 3.1 3.9v4.1h-2.6v-3.6c0-1-.1-2.1-1.4-2.1-1.4 0-1.6 1-1.6 2v3.7h-2.6v-7.8Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></symbol>
+  <symbol id="i-ieee" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.8h8.5L19 7.3v13.9H6z"/><path d="M14.3 2.8v4.7H19"/><path d="M9 12h7M9 15h7M9 18h4.5"/></g></symbol>
+  <symbol id="i-uni" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10v8M9.6 10v8M14.4 10v8M19 10v8"/><path d="M3 20.5h18"/></g></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12M7 11l5 5 5-5M4.5 20.5h15"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+</svg>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="site-header">
+  <nav class="container nav" aria-label="Primary">
+    <a class="brand" href="#top">Uzman Ali</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     1. HERO / TITLE BLOCK
+     ============================================================ -->
+<section class="hero" id="top" aria-labelledby="name">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Antennas &amp; bio-electromagnetics</span>
+      <h1 id="name">Uzman Ali</h1>
+      <p class="tagline">Designing safe, miniaturized wireless links for implantable medical devices.</p>
+      <ul class="title-block">
+        <li><strong>PhD Candidate (thesis submitted)</strong>, Electrical Engineering</li>
+        <li>Faculty of Information Technology and Communication Sciences, Tampere University, Finland</li>
+        <li>Tampere Electronics Research Centre · Supervisor: Assoc. Prof. Toni Björninen</li>
+        <li><a class="js-email" data-user="uzman.ali22" data-domain="outlook.com" href="#contact">Show email</a></li>
+      </ul>
+
+      <!-- Profile links: edit URLs here and in the Contact section -->
+      <ul class="profile-links" aria-label="Academic profiles">
+        <li><a class="js-email-icon" data-user="uzman.ali22" data-domain="outlook.com" href="#contact" aria-label="Email" title="Email"><svg aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        <li><a href="https://scholar.google.com/citations?user=Hd5RaC4AAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar" rel="noopener"><svg aria-hidden="true"><use href="#i-scholar"/></svg></a></li>
+        <li><a href="https://orcid.org/0009-0001-4804-506X" aria-label="ORCID" title="ORCID" rel="noopener"><svg aria-hidden="true"><use href="#i-orcid"/></svg></a></li>
+        <li><a href="https://www.researchgate.net/profile/Uzman-Ali-2" aria-label="ResearchGate" title="ResearchGate" rel="noopener"><svg aria-hidden="true"><use href="#i-rg"/></svg></a></li>
+        <li><a href="https://ieeexplore.ieee.org/author/219854431907765" aria-label="IEEE Xplore author profile" title="IEEE Xplore" rel="noopener"><svg aria-hidden="true"><use href="#i-ieee"/></svg></a></li>
+        <li><a href="https://researchportal.tuni.fi/en/persons/uzman-ali/" aria-label="Tampere University Research Portal" title="Tampere University Research Portal" rel="noopener"><svg aria-hidden="true"><use href="#i-uni"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/uzman-ali22/" aria-label="LinkedIn" title="LinkedIn" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://github.com/uzmanali22" aria-label="GitHub" title="GitHub" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg></a></li>
+      </ul>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="cv-academic.pdf"><svg aria-hidden="true"><use href="#i-download"/></svg>Academic CV (PDF)</a>
+        <a class="btn btn-ghost" href="cv-industry.pdf"><svg aria-hidden="true"><use href="#i-download"/></svg>Industry résumé (PDF)</a>
+      </div>
+    </div>
+
+    <!-- Headshot: replace photo.jpg (square, ~640×640 px) -->
+    <img class="hero-photo" src="photo.jpg" width="260" height="260" alt="Portrait of Uzman Ali" fetchpriority="high">
+  </div>
+</section>
+
+<!-- ============================================================
+     2. ABOUT
+     ============================================================ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2 id="about-h">Research statement</h2>
+      <div class="prose statement">
+        <p>I design miniaturized antennas and wireless links that let medical implants communicate safely from inside the human body. My doctoral research at Tampere University focuses on intracranial implants: multi-band implantable antennas, implant-to-implant communication through realistic head tissue, and the SAR and temperature-rise limits that determine how much power such links may use.</p>
+        <p>I work across the full chain, from antenna design and full-wave electromagnetic modeling to prototype fabrication and measurements in tissue-mimicking phantoms. Before my PhD I worked in industry as an antenna design engineer and as an RF simulation application engineer, and that shapes how I approach research: designs should be buildable, measurable and useful.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <h3 class="subhead">Research interests</h3>
+      <ul class="chips">
+        <li class="chip">Implantable antennas</li>
+        <li class="chip">Intracranial implants</li>
+        <li class="chip">Implant-to-implant links</li>
+        <li class="chip">Bio-electromagnetics</li>
+        <li class="chip">SAR &amp; RF exposure safety</li>
+        <li class="chip">EM–thermal multiphysics</li>
+        <li class="chip">Water-based antennas</li>
+        <li class="chip">Flexible &amp; biocompatible materials</li>
+        <li class="chip">Wireless power transfer</li>
+        <li class="chip">Antenna measurements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. NEWS & UPDATES  (rendered from SITE_DATA.news in the script below)
+     ============================================================ -->
+<section id="news" aria-labelledby="news-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">News</span>
+      <h2 id="news-h">News &amp; updates</h2>
+    </div>
+    <ul class="news-list" id="news-list"></ul>
+    <button class="btn btn-ghost news-toggle" id="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden>Show all updates</button>
+    <noscript><p class="muted">Enable JavaScript to see the news list.</p></noscript>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. RESEARCH THEMES
+     Paper counts are computed automatically from publication "tags".
+     To add a figure, replace a <div class="figure-ph">…</div> with e.g.
+     <img src="figures/sar-map.jpg" alt="Simulated SAR distribution in a head model" loading="lazy">
+     ============================================================ -->
+<section id="research" aria-labelledby="research-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Research</span>
+      <h2 id="research-h">Research themes</h2>
+      <p>My work runs from antenna design and full-wave EM modeling to prototype fabrication and experimental validation.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>implantable antenna prototype</div>
+        <div class="theme-body">
+          <h3>Miniaturized implantable antennas</h3>
+          <p>Compact multi-band antennas for intracranial implants, built on flexible and biocompatible materials and characterized in multilayer head models.</p>
+          <span class="theme-meta" data-tag="implant"></span>
+        </div>
+      </article>
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>implant-to-implant link setup</div>
+        <div class="theme-body">
+          <h3>Implant-to-implant communication</h3>
+          <p>Near-field coupling and link budgets between implants in realistic human-body scenarios, validated with prototypes in liquid head phantoms.</p>
+          <span class="theme-meta" data-tag="i2i"></span>
+        </div>
+      </article>
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>SAR map</div>
+        <div class="theme-body">
+          <h3>RF exposure, SAR &amp; thermal safety</h3>
+          <p>SAR and temperature-rise assessment that sets the maximum safe transmit power and checks compliance with exposure guidelines.</p>
+          <span class="theme-meta" data-tag="sar"></span>
+        </div>
+      </article>
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>water-based antenna</div>
+        <div class="theme-body">
+          <h3>Water-based antennas</h3>
+          <p>Antennas that use water as a radiating or tuning medium, aiming for structures that adapt well to biological environments.</p>
+          <span class="theme-meta" data-tag="water"></span>
+        </div>
+      </article>
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>coupled EM–thermal simulation</div>
+        <div class="theme-body">
+          <h3>EM–thermal multiphysics modeling</h3>
+          <p>Coupled electromagnetic and thermal simulation linking antenna performance to tissue heating in anatomically realistic models.</p>
+          <span class="theme-meta" data-tag="multiphysics"></span>
+        </div>
+      </article>
+      <article class="card theme-card reveal">
+        <div class="figure-ph" role="img" aria-label="Figure placeholder">Figure placeholder<br>measurement setup photo</div>
+        <div class="theme-body">
+          <h3>Measurement methods</h3>
+          <p>A custom antenna measurement setup with independent control of height, spacing, axial rotation and planar orientation for repeatable link experiments.</p>
+          <span class="theme-meta">Experimental platform</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. SELECTED PUBLICATIONS  (publications with featured: true)
+     6. ALL PUBLICATIONS       (rendered from SITE_DATA.publications)
+     ============================================================ -->
+<section id="publications" aria-labelledby="pubs-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Publications</span>
+      <h2 id="pubs-h">Selected publications</h2>
+    </div>
+    <div class="grid-3" id="featured-pubs"></div>
+
+    <h2 id="all-pubs-h" style="margin-top:64px">All publications</h2>
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button class="filter-btn" type="button" data-type="all" aria-pressed="true">All</button>
+      <button class="filter-btn" type="button" data-type="journal" aria-pressed="false">Journal</button>
+      <button class="filter-btn" type="button" data-type="conference" aria-pressed="false">Conference</button>
+      <button class="filter-btn" type="button" data-type="review" aria-pressed="false" hidden>Under review</button>
+      <button class="filter-btn" type="button" data-type="chapter" aria-pressed="false" hidden>Book chapter</button>
+      <label for="year-filter" class="visually-hidden">Filter by year</label>
+      <select id="year-filter"><option value="all">All years</option></select>
+    </div>
+    <div id="pub-groups" aria-live="polite"></div>
+    <noscript><p class="muted">Enable JavaScript to see the publication list, or visit my <a href="https://scholar.google.com/citations?user=Hd5RaC4AAAAJ&amp;hl=en">Google Scholar profile</a>.</p></noscript>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. METHODS & TOOLS  (only tools listed in my CVs)
+     ============================================================ -->
+<section id="methods" aria-labelledby="methods-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Methods</span>
+      <h2 id="methods-h">Methods &amp; tools</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="card skill-card reveal">
+        <h3>EM simulation</h3>
+        <ul><li>Ansys HFSS</li><li>CST Studio Suite</li><li>Sim4Life</li><li>Ansys multiphysics tools</li></ul>
+      </div>
+      <div class="card skill-card reveal">
+        <h3>Antenna &amp; RF design</h3>
+        <ul><li>Multiband &amp; broadband antennas</li><li>Impedance matching</li><li>Matching networks</li><li>Antenna integration</li><li>Radiation-pattern optimization</li><li>EMC analysis</li><li>RF circuit design (ADS)</li></ul>
+      </div>
+      <div class="card skill-card reveal">
+        <h3>Measurement &amp; validation</h3>
+        <ul><li>Vector network analyzer</li><li>Anechoic chamber</li><li>OTA testing</li><li>SAR analysis</li><li>Liquid head phantoms</li><li>Wireless link evaluation</li></ul>
+      </div>
+      <div class="card skill-card reveal">
+        <h3>Fabrication &amp; lab</h3>
+        <ul><li>Prototype development</li><li>Soldering</li><li>Custom measurement fixtures</li></ul>
+      </div>
+      <div class="card skill-card reveal">
+        <h3>Data &amp; programming</h3>
+        <ul><li>MATLAB (EM &amp; measurement data processing and visualization)</li></ul>
+      </div>
+      <div class="card skill-card reveal">
+        <h3>Communication</h3>
+        <ul><li>Scientific writing</li><li>Conference presentations</li><li>Technical training &amp; workshops</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. EXPERIENCE
+     Logos: drop files in /logos and replace the text inside <span class="logo">
+     with e.g. <img src="logos/tau.svg" alt="" loading="lazy">
+     ============================================================ -->
+<section id="experience" aria-labelledby="exp-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 id="exp-h">Experience</h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">TAU</span>
+        <div>
+          <div class="tl-head"><h3>Doctoral Researcher</h3><span class="tl-date">Apr 2023 – present</span></div>
+          <p class="tl-org">Tampere University, Tampere Electronics Research Centre · Tampere, Finland</p>
+          <ul>
+            <li>Research on implantable antennas, RF systems, electromagnetic propagation and wireless communication, combining simulation, prototyping and experimental validation.</li>
+            <li>Designed, optimized and characterized multiband and broadband antennas with Ansys HFSS and CST Studio Suite.</li>
+            <li>Developed RF measurement methods and experimental setups, and carried out VNA measurements, antenna characterization, SAR analysis and wireless link assessment.</li>
+            <li>Built MATLAB tools to process, visualize and analyze large electromagnetic and measurement datasets.</li>
+            <li>Published in IEEE journals and presented at EuCAP, APS/URSI and APMC; supervised students and research trainees.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">EDR</span>
+        <div>
+          <div class="tl-head"><h3>Application Engineer (High Frequency)</h3><span class="tl-date">Jan 2022 – Apr 2023</span></div>
+          <p class="tl-org">EDR &amp; Medeso Oy · Tampere, Finland</p>
+          <ul>
+            <li>Supported industrial customers in RF, microwave, antenna and EM simulation projects using Ansys HFSS and multiphysics tools.</li>
+            <li>Provided technical consulting, troubleshooting and workflow optimization, including antenna design, RF system analysis and EMC assessments.</li>
+            <li>Ran technical demonstrations, customer training sessions and workshops for R&amp;D teams in telecommunications, industrial electronics and medical technology.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">RAD</span>
+        <div>
+          <div class="tl-head"><h3>Antenna Design Engineer</h3><span class="tl-date">Apr 2020 – Jul 2021</span></div>
+          <p class="tl-org">Radientum Oy · Tampere, Finland</p>
+          <ul>
+            <li>Designed and optimized antennas for commercial wireless and IoT products, from concept to prototype validation.</li>
+            <li>Performed matching-network optimization, impedance tuning, RF measurements and performance verification across multiple bands.</li>
+            <li>Worked with mechanical and hardware engineers to resolve RF integration challenges in compact devices.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">TAU</span>
+        <div>
+          <div class="tl-head"><h3>Research Assistant</h3><span class="tl-date">May 2019 – Oct 2019</span></div>
+          <p class="tl-org">Tampere University · Tampere, Finland</p>
+          <ul>
+            <li>Antenna design, EM simulation, RF measurements and laboratory testing for wireless communication research.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="card projects reveal">
+      <h3>Selected industry and applied projects</h3>
+      <ul>
+        <li>Implant-to-implant RF communication platform: antennas, measurement setups and link evaluation</li>
+        <li>ISM-band implantable capsule antenna: design, simulation and validation</li>
+        <li>Horn antenna for biomedical and implant communication research</li>
+        <li>120 GHz radar array antenna for high-resolution sensing</li>
+        <li>Multi-radio LTE/Bluetooth/GNSS antennas for connected-vehicle IoT</li>
+        <li>RFID reader antennas for inventory and asset tracking</li>
+        <li>RFID tag antennas for anti-counterfeiting of bottled goods</li>
+        <li>Bluetooth antennas for IoT sensor nodes embedded in concrete</li>
+        <li>Bluetooth antennas for wireless smoke detection systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. EDUCATION
+     ============================================================ -->
+<section id="education" aria-labelledby="edu-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Education</span>
+      <h2 id="edu-h">Education</h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">TAU</span>
+        <div>
+          <div class="tl-head"><h3>Doctor of Science (Technology): thesis submitted</h3><span class="tl-date">2023 – 2026</span></div>
+          <p class="tl-org">Tampere University · Electrical Engineering, emphasis on antennas and bio-electromagnetics</p>
+          <p class="tl-detail"><span class="label">THESIS</span><em>Development of Implantable Antennas for Intracranial Applications and Implant-to-Implant Communication</em> (submitted 2026)</p>
+          <p class="tl-detail"><span class="label">SUPERVISOR</span>Assoc. Prof. Toni Björninen</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">TAU</span>
+        <div>
+          <div class="tl-head"><h3>Master of Science (Technology)</h3><span class="tl-date">2019</span></div>
+          <p class="tl-org">Tampere University · Electrical Engineering, majors in Wireless Communication and RF Systems</p>
+          <p class="tl-detail"><span class="label">THESIS</span><em>Comparison of Conventional 50-Ohm Impedance Matching and Antenna Self-Matching for Energy Harvester</em></p>
+          <p class="tl-detail"><span class="label">SUPERVISOR</span>Toni Björninen</p>
+          <p class="tl-detail"><span class="label">FUNDING</span>100% tuition fee waiver</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="logo" aria-hidden="true">GCU</span>
+        <div>
+          <div class="tl-head"><h3>Bachelor of Science (B.Sc.)</h3><span class="tl-date">2010 – 2014</span></div>
+          <p class="tl-org">Government College University Faisalabad, Pakistan · Electrical, Electronics and Communications Engineering</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. AWARDS & HONORS  +  TEACHING & SERVICE
+     ============================================================ -->
+<section id="teaching" aria-labelledby="awards-h">
+  <div class="container two-col">
+    <div class="reveal">
+      <span class="eyebrow">Recognition</span>
+      <h2 id="awards-h">Awards &amp; grants</h2>
+      <ul class="award-list">
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span><strong>€26,000 research grant</strong>, Kaute Foundation (Kaute-säätiö), for independent research on gaps identified in my PhD work</span><span class="tl-date">2026</span></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span><strong>€1,000 DELTA doctoral training grant</strong> to attend the European School of Antennas and Propagation course “Body-Centric Wireless Communications”, Queen Mary University of London</span><span class="tl-date">2025</span></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span><strong>100% tuition fee waiver</strong> for master’s studies, Tampere University</span><span class="tl-date">M.Sc.</span></li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <span class="eyebrow">Teaching &amp; service</span>
+      <h2>Teaching &amp; service</h2>
+      <div class="service-block">
+        <h3>Teaching assistance</h3>
+        <ul>
+          <li><em>Basics of RF and Antenna Engineering</em>: computer exercise sessions with HFSS and ADS (Autumn 2026)</li>
+          <li>Hands-on demonstrations of VNAs and RF measurement equipment, plus soldering and prototyping instruction (Autumn 2025)</li>
+          <li><em>RF Circuit Design</em>: exercises, practical sessions and guidance on semester projects (Autumn 2024)</li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3>Supervision &amp; mentoring</h3>
+        <ul>
+          <li>Supervised master’s students in antenna simulation, measurements, thesis writing and scientific publishing</li>
+          <li>Collaborated with visiting doctoral researchers on RF energy harvesting, implantable MIMO antennas and wireless power transfer</li>
+          <li>Mentored bachelor’s students from Pakistan as they moved into academic research</li>
+          <li>Tutored new international master’s students at Tampere University</li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3>Peer review</h3>
+        <ul><li>Reviewer for 20+ journal and conference manuscripts, including <em>IEEE AWPL</em>, <em>IEEE J-ERM</em>, <em>IEEE ISBI</em> and <em>Communication Engineering</em></li></ul>
+      </div>
+      <div class="service-block">
+        <h3>Memberships</h3>
+        <ul><li>IEEE, including the Antennas and Propagation Society, Engineering in Medicine and Biology Society, Microwave Theory and Technology Society, and IEEE Young Professionals</li></ul>
+      </div>
+      <div class="service-block">
+        <h3>Schools &amp; workshops</h3>
+        <ul>
+          <li>European School of Antennas and Propagation, “Body-Centric Wireless Communications”, Queen Mary University of London (2025)</li>
+          <li>DELTA doctoral schools: Autumn 2023 (Jyväskylä), Summer 2024 (Tampere), 2025 (Turku), 2026 (Helsinki); Winter 2024 &amp; 2026 (Ruka)</li>
+          <li>Ansys Learning (Tampere, 2024–2026), Simulia Workshop (Oulu, 2024)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. CONTACT
+     ============================================================ -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-h">Get in touch</h2>
+      <p>I’m open to research collaborations, postdoctoral positions and R&amp;D roles in antennas, bio-electromagnetics and wireless medical devices.</p>
+    </div>
+    <div class="card contact-card reveal">
+      <div>
+        <h3>Email</h3>
+        <p class="contact-email"><a class="js-email" data-user="uzman.ali22" data-domain="outlook.com" href="#contact">Show email</a></p>
+        <noscript><p>uzman.ali22 [at] outlook [dot] com</p></noscript>
+        <h3>Location</h3>
+        <address>
+          Tampere Electronics Research Centre<br>
+          Faculty of Information Technology and Communication Sciences<br>
+          Tampere University, 33720 Tampere, Finland
+        </address>
+      </div>
+      <div>
+        <h3>Profiles</h3>
+        <ul class="contact-links">
+          <li><a href="https://scholar.google.com/citations?user=Hd5RaC4AAAAJ&amp;hl=en" rel="noopener"><svg aria-hidden="true"><use href="#i-scholar"/></svg><span>Google Scholar</span></a></li>
+          <li><a href="https://orcid.org/0009-0001-4804-506X" rel="noopener"><svg aria-hidden="true"><use href="#i-orcid"/></svg><span>ORCID 0009-0001-4804-506X</span></a></li>
+          <li><a href="https://www.researchgate.net/profile/Uzman-Ali-2" rel="noopener"><svg aria-hidden="true"><use href="#i-rg"/></svg><span>ResearchGate</span></a></li>
+          <li><a href="https://ieeexplore.ieee.org/author/219854431907765" rel="noopener"><svg aria-hidden="true"><use href="#i-ieee"/></svg><span>IEEE Xplore</span></a></li>
+          <li><a href="https://researchportal.tuni.fi/en/persons/uzman-ali/" rel="noopener"><svg aria-hidden="true"><use href="#i-uni"/></svg><span>Tampere University Research Portal</span></a></li>
+          <li><a href="https://www.linkedin.com/in/uzman-ali22/" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>
+          <li><a href="https://github.com/uzmanali22" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     12. FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year">2026</span> Uzman Ali · Last updated October 2026</span>
+    <a class="back-top" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ==================================================================
+   SITE DATA: edit this block to update News and Publications.
+   ------------------------------------------------------------------
+   NEWS item:  { year: "2026", text: "…", isNew: true }
+     • Newest first. The first 6 are visible; the rest appear with "Show all".
+     • "text" may contain simple HTML (<em>, <a href="…">).
+     • Add a month later by writing e.g. year: "Sep 2026".
+
+   PUBLICATION item:
+     {
+       id: "J4",                       // unique; used for BibTeX key fallback
+       type: "journal",                // journal | conference | review | chapter
+       year: 2026,
+       authors: ["Uzman Ali", "Abdul Basir", "Toni Björninen"],  // full names; "Uzman Ali" is bolded automatically
+       title: "…",
+       venue: "IEEE Antennas Wireless Propag. Lett.",            // IEEE-abbreviated (shown on the site)
+       venueFull: "IEEE Antennas and Wireless Propagation Letters", // used in BibTeX
+       volume: "", number: "", pages: "",
+       doi: "10.1109/…",               // leave "" if none
+       url: "",                        // optional landing page if there is no DOI
+       pdf: "",                        // optional link to a PDF, e.g. "papers/ali2026.pdf"
+       oa: "",                         // optional open-access repository link
+       award: "",                      // e.g. "Best Paper Award": shows a badge
+       tags: ["implant", "i2i"],       // implant | i2i | sar | water | multiphysics (drives research-theme counts)
+       featured: true,                 // show in "Selected publications" (keep 3)
+       takeaway: "One sentence."       // shown on featured cards
+     }
+   ================================================================== */
+const ME = "Uzman Ali";
+
+const SITE_DATA = {
+  news: [
+    { year: "2026", isNew: true, text: "Submitted my doctoral thesis, <em>Development of Implantable Antennas for Intracranial Applications and Implant-to-Implant Communication</em>, at Tampere University." },
+    { year: "2026", isNew: true, text: "Awarded a competitive €26,000 grant from the Kaute Foundation for independent research building on my PhD work." },
+    { year: "2026", text: "Teaching assistant for <em>Basics of RF and Antenna Engineering</em>, running HFSS and ADS computer exercises." },
+    { year: "2026", text: "Paper on quad-band antennas for intracranial implants published in <em>IEEE Journal of Electromagnetics, RF and Microwaves in Medicine and Biology</em>." },
+    { year: "2026", text: "Paper on experimentally validated implant-to-implant communication with compact loop antennas published in <em>IEEE Antennas and Wireless Propagation Letters</em>." },
+    { year: "2026", text: "Attended the DELTA Winter School (Ruka) and DELTA Summer School (Helsinki)." },
+    { year: "2025", text: "Presented intracranial implant-to-implant communication results at APMC 2025." },
+    { year: "2025", text: "Presented at EuCAP 2025 in Stockholm: implant-to-implant links with quad-band PIFAs and tunable dual-band loop antennas for brain implants." },
+    { year: "2025", text: "Co-authored a wideband, low-SAR 2.45 GHz antenna paper in <em>IEEE Open Journal of Antennas and Propagation</em>." },
+    { year: "2025", text: "Received a €1,000 DELTA doctoral training grant to attend the European School of Antennas and Propagation course “Body-Centric Wireless Communications” at Queen Mary University of London." },
+    { year: "2025", text: "Ran hands-on VNA and prototyping demonstrations for students; presented at Tampere University Research Day and the DELTA Summer School (Turku)." },
+    { year: "2024", text: "Presented at IEEE AP-S/URSI 2024 (SAR comparison of 4-band PIFAs for brain implants) and at APMC 2024." },
+    { year: "2024", text: "Presented a quad-band meandered implantable PIFA for brain health monitoring at EuCAP 2024 in Glasgow." },
+    { year: "2024", text: "Presented research at RF Sampo (Oulu), LFTY (Tampere) and Tampere University Research Day; attended the Simulia Workshop (Oulu)." },
+    { year: "2024", text: "Teaching assistant for <em>RF Circuit Design</em> at Tampere University." },
+    { year: "2023", text: "Started doctoral research on implantable antennas at Tampere University; attended the DELTA Autumn School (Jyväskylä)." }
+  ],
+
+  /* Publications compiled from IEEE Xplore, Tampere University Research Portal,
+     Trepo and ResearchGate listings (Oct 2026). Items marked VERIFY need a check. */
+  publications: [
+    {
+      id: "J1", type: "journal", year: 2026,
+      authors: ["Uzman Ali", "Abdul Basir", "Toni Björninen"],
+      title: "Experimentally Validated Implant-to-Implant Communication at ISM Bands Using Compact Loop Antennas",
+      venue: "IEEE Antennas Wireless Propag. Lett.", venueFull: "IEEE Antennas and Wireless Propagation Letters",
+      volume: "25", number: "4", pages: "",
+      doi: "10.1109/LAWP.2026.3661262", url: "", pdf: "", oa: "", award: "",
+      tags: ["implant", "i2i"], featured: true,
+      takeaway: "Compact loop antennas for implant-to-implant links, simulated in a seven-layer head model and validated in liquid phantoms with positive link margins up to 15 cm at 25 Mbps."
+    },
+    {
+      id: "J2", type: "journal", year: 2026,
+      authors: ["Uzman Ali", "Abdul Basir", "Toni Björninen"],
+      title: "Quad-Band Antenna for Intracranial Implants With Head Simulations and Measurements",
+      venue: "IEEE J. Electromagn., RF, Microw. Med. Biol.", venueFull: "IEEE Journal of Electromagnetics, RF and Microwaves in Medicine and Biology",
+      volume: "", number: "", pages: "",   // VERIFY: volume/issue once final (one listing says vol. 10, no. 3)
+      doi: "10.1109/JERM.2026.3691949", url: "", pdf: "", oa: "", award: "",
+      tags: ["implant"], featured: true,
+      takeaway: "A quad-band implantable PIFA that supports wireless power transfer, data telemetry and sleep/wake-up switching for intracranial implants, characterized in head simulations and measurements."
+    },
+    {
+      id: "J3", type: "journal", year: 2025,
+      authors: ["Sami Ullah Khan", "Muhammad Aamir", "Muhammad Abbas", "Uzman Ali", "Usman Ali", "Sadiq Ullah", "Abdul Basir", "Toni Björninen"],
+      title: "A Wideband and Low-SAR Antenna Design at 2.45 GHz for Biomedical Applications",
+      venue: "IEEE Open J. Antennas Propag.", venueFull: "IEEE Open Journal of Antennas and Propagation",
+      volume: "6", number: "4", pages: "",
+      doi: "10.1109/OJAP.2025.3565837", url: "", pdf: "", oa: "", award: "",
+      tags: ["sar"], featured: false, takeaway: ""
+    },
+    {
+      id: "C1", type: "conference", year: 2025,
+      authors: ["Uzman Ali", "Abdul Basir", "Toni Björninen"],
+      title: "Experimental Analysis of a Quad-Band Antenna to Establish Wireless Intracranial Implant-to-Implant Communications",
+      venue: "Proc. Asia-Pacific Microw. Conf. (APMC)", venueFull: "2025 Asia-Pacific Microwave Conference (APMC)",
+      volume: "", number: "", pages: "",
+      doi: "10.1109/APMC65046.2025.11379690", url: "", pdf: "", oa: "https://trepo.tuni.fi/handle/10024/234568", award: "",
+      tags: ["implant", "i2i"], featured: false, takeaway: ""
+    },
+    {
+      id: "C2", type: "conference", year: 2025,
+      authors: ["Uzman Ali", "Abdul Basir", "Nasir Ullah Khan", "Toni Björninen"],
+      title: "Implant-to-Implant Communications Using Quad-Band PIFAs for Intracranial Applications",
+      venue: "Proc. 19th Eur. Conf. Antennas Propag. (EuCAP)", venueFull: "2025 19th European Conference on Antennas and Propagation (EuCAP)",
+      volume: "", number: "", pages: "",
+      doi: "10.23919/EuCAP63536.2025.10999849", url: "", pdf: "", oa: "", award: "",
+      tags: ["implant", "i2i"], featured: false, takeaway: ""
+    },
+    {
+      id: "C3", type: "conference", year: 2025,
+      authors: ["Abdul Basir", "Baqir Kazmi", "Uzman Ali", "Toni Björninen"],
+      title: "Tunable Dual-Band Loop Antennas With Simple Parametric Control for Brain Implant Applications",
+      venue: "Proc. 19th Eur. Conf. Antennas Propag. (EuCAP)", venueFull: "2025 19th European Conference on Antennas and Propagation (EuCAP)",
+      volume: "", number: "", pages: "",
+      doi: "", url: "", pdf: "", oa: "", award: "",   // TODO: add DOI
+      tags: ["implant"], featured: false, takeaway: ""
+    },
+    {
+      id: "C4", type: "conference", year: 2024,
+      authors: ["Uzman Ali", "Abdul Basir", "Muhammad Waqas Ahmad Khan", "Nikta Pournoori", "Lauri Sydänheimo", "Leena Ukkonen", "Toni Björninen"],
+      title: "Beyond the Scalp: Numerical SAR and Performance Comparison of Two 4-Band PIFAs for Brain Implants",
+      venue: "Proc. IEEE Int. Symp. Antennas Propag. INC/USNC-URSI Radio Sci. Meeting (AP-S/INC-USNC-URSI)",
+      venueFull: "2024 IEEE International Symposium on Antennas and Propagation and INC/USNC-URSI Radio Science Meeting (AP-S/INC-USNC-URSI)",
+      volume: "", number: "", pages: "",
+      doi: "", url: "https://ieeexplore.ieee.org/document/10686471", pdf: "", oa: "", award: "",   // VERIFY: IEEE document link; add DOI
+      tags: ["implant", "sar"], featured: true,
+      takeaway: "Compares radiation performance and SAR of two equal-volume 4-band brain-implant PIFAs, one single-substrate and one with a superstrate, across MedRadio, WMTS and ISM bands."
+    },
+    {
+      id: "C5", type: "conference", year: 2024,
+      authors: ["Uzman Ali", "Muhammad Waqas Ahmad Khan", "Nikta Pournoori", "Toni Björninen"],   // VERIFY: author list
+      title: "Quad-Band Meandered Implantable Planar Inverted-F Antenna for Wireless Brain Health Monitoring",
+      venue: "Proc. 18th Eur. Conf. Antennas Propag. (EuCAP)", venueFull: "2024 18th European Conference on Antennas and Propagation (EuCAP)",
+      volume: "", number: "", pages: "",
+      doi: "10.23919/EuCAP60739.2024.10501387", url: "", pdf: "", oa: "", award: "",   // VERIFY: DOI
+      tags: ["implant"], featured: false, takeaway: ""
+    }
+  ]
+};
+</script>
+
+<script>
+/* ==================================================================
+   BEHAVIOUR: no need to edit below this line
+   ================================================================== */
+(function () {
+  "use strict";
+  var doc = document.documentElement;
+
+  /* ---------- Helpers ---------- */
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function initials(full) {
+    var parts = full.trim().split(/\s+/), last = parts.pop();
+    return parts.map(function (p) { return p.charAt(0) + "."; }).join(" ") + (parts.length ? " " : "") + last;
+  }
+  function authorList(authors) {
+    var a = authors.map(function (n) { var s = esc(initials(n)); return n === ME ? "<strong>" + s + "</strong>" : s; });
+    if (a.length <= 2) return a.join(" and ");
+    return a.slice(0, -1).join(", ") + ", and " + a[a.length - 1];
+  }
+  function toast(msg) {
+    var t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("show");
+    clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove("show"); }, 2200);
+  }
+
+  /* ---------- Theme toggle ---------- */
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  document.querySelector(".theme-toggle").addEventListener("click", function () {
+    var cur = doc.getAttribute("data-theme") || (mq && mq.matches ? "dark" : "light");
+    var next = cur === "dark" ? "light" : "dark";
+    doc.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+
+  /* ---------- Mobile menu ---------- */
+  var menuBtn = document.querySelector(".menu-btn"), links = document.getElementById("nav-links");
+  function closeMenu() { links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); menuBtn.setAttribute("aria-label", "Open menu"); }
+  menuBtn.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  links.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && links.classList.contains("open")) { closeMenu(); menuBtn.focus(); } });
+
+  /* ---------- Email (assembled at runtime to deter scrapers) ---------- */
+  document.querySelectorAll(".js-email, .js-email-icon").forEach(function (a) {
+    var addr = a.dataset.user + "@" + a.dataset.domain;
+    a.href = "mailto:" + addr;
+    if (a.classList.contains("js-email")) a.textContent = addr;
+  });
+
+  /* ---------- News ---------- */
+  var NEWS_VISIBLE = 6;
+  var newsList = document.getElementById("news-list"), newsBtn = document.getElementById("news-toggle");
+  newsList.innerHTML = SITE_DATA.news.map(function (n, i) {
+    return '<li' + (i >= NEWS_VISIBLE ? ' class="is-extra"' : '') + '><time>' + esc(n.year) + '</time><p>' +
+      (n.isNew ? '<span class="badge-new">New</span>' : '') + n.text + '</p></li>';
+  }).join("");
+  if (SITE_DATA.news.length > NEWS_VISIBLE) {
+    newsBtn.hidden = false;
+    newsBtn.addEventListener("click", function () {
+      var exp = newsList.classList.toggle("expanded");
+      newsBtn.setAttribute("aria-expanded", String(exp));
+      newsBtn.textContent = exp ? "Show fewer" : "Show all updates";
+    });
+  }
+
+  /* ---------- Publications ---------- */
+  var pubs = SITE_DATA.publications.slice().sort(function (a, b) { return b.year - a.year; });
+  var GROUPS = [
+    { type: "journal", label: "Journal articles", prefix: "J" },
+    { type: "conference", label: "Conference papers", prefix: "C" },
+    { type: "review", label: "Under review", prefix: "R" },
+    { type: "chapter", label: "Book chapters", prefix: "B" }
+  ];
+  // stable IEEE-style numbers per group
+  GROUPS.forEach(function (g) {
+    pubs.filter(function (p) { return p.type === g.type; }).forEach(function (p, i) { p._num = g.prefix + (i + 1); });
+  });
+
+  function citation(p) {
+    var s = authorList(p.authors) + ', “' + esc(p.title) + ',” ';
+    if (p.type === "conference") s += "in <em>" + esc(p.venue) + "</em>, " + p.year;
+    else if (p.type === "review") s += "submitted to <em>" + esc(p.venue) + "</em>, " + p.year;
+    else {
+      s += "<em>" + esc(p.venue) + "</em>";
+      if (p.volume) s += ", vol. " + esc(p.volume);
+      if (p.number) s += ", no. " + esc(p.number);
+      if (p.pages) s += ", pp. " + esc(p.pages);
+      s += ", " + p.year;
+    }
+    if (p.doi) s += ", doi: " + esc(p.doi);
+    return s + ".";
+  }
+  function bibtex(p) {
+    var first = p.authors[0].trim().split(/\s+/).pop().toLowerCase().normalize("NFD").replace(/[^a-z]/g, "");
+    var word = (p.title.toLowerCase().match(/[a-z]{4,}/g) || ["paper"]).filter(function (w) { return ["with", "using", "from", "into", "towards"].indexOf(w) < 0; })[0] || "paper";
+    var isConf = p.type === "conference";
+    var f = [
+      ["author", p.authors.join(" and ")],
+      ["title", "{" + p.title + "}"],
+      [isConf ? "booktitle" : "journal", p.venueFull || p.venue],
+      ["year", String(p.year)],
+      ["volume", p.volume], ["number", p.number], ["pages", p.pages],
+      ["doi", p.doi], ["url", p.doi ? "" : p.url]
+    ].filter(function (x) { return x[1]; });
+    return "@" + (isConf ? "inproceedings" : "article") + "{" + first + p.year + word + ",\n" +
+      f.map(function (x) { return "  " + x[0] + " = {" + x[1] + "}"; }).join(",\n") + "\n}";
+  }
+  function actions(p) {
+    var h = "";
+    if (p.doi) h += '<a class="btn-sm" href="https://doi.org/' + esc(p.doi) + '" rel="noopener">DOI</a>';
+    else if (p.url) h += '<a class="btn-sm" href="' + esc(p.url) + '" rel="noopener">Link</a>';
+    if (p.pdf) h += '<a class="btn-sm" href="' + esc(p.pdf) + '">PDF</a>';
+    if (p.oa) h += '<a class="btn-sm" href="' + esc(p.oa) + '" rel="noopener">Open access</a>';
+    h += '<button class="btn-sm copy-bib" type="button" data-id="' + esc(p.id) + '">BibTeX</button>';
+    return h;
+  }
+  function awardBadge(p) {
+    return p.award ? '<span class="award-badge"><svg aria-hidden="true"><use href="#i-star"/></svg>' + esc(p.award) + '</span>' : "";
+  }
+
+  // Featured cards
+  document.getElementById("featured-pubs").innerHTML = pubs.filter(function (p) { return p.featured; }).slice(0, 3).map(function (p) {
+    return '<article class="card pub-card reveal">' +
+      '<span class="venue">' + esc(p.venue.replace(/^Proc\. /, "")) + " · " + p.year + '</span>' +
+      '<h3>' + esc(p.title) + '</h3>' +
+      '<p class="authors">' + authorList(p.authors) + '</p>' +
+      (p.takeaway ? '<p class="takeaway">' + esc(p.takeaway) + '</p>' : '') +
+      awardBadge(p) +
+      '<div class="pub-actions">' + actions(p) + '</div></article>';
+  }).join("");
+
+  // Filters
+  var state = { type: "all", year: "all" };
+  var yearSel = document.getElementById("year-filter");
+  Array.from(new Set(pubs.map(function (p) { return p.year; }))).sort(function (a, b) { return b - a; }).forEach(function (y) {
+    var o = document.createElement("option"); o.value = y; o.textContent = y; yearSel.appendChild(o);
+  });
+  document.querySelectorAll(".filter-btn").forEach(function (b) {
+    if (b.dataset.type !== "all" && !pubs.some(function (p) { return p.type === b.dataset.type; })) { b.hidden = true; return; }
+    b.hidden = false;
+    b.addEventListener("click", function () {
+      state.type = b.dataset.type;
+      document.querySelectorAll(".filter-btn").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      renderPubs();
+    });
+  });
+  yearSel.addEventListener("change", function () { state.year = yearSel.value; renderPubs(); });
+
+  function renderPubs() {
+    var html = "";
+    GROUPS.forEach(function (g) {
+      if (state.type !== "all" && state.type !== g.type) return;
+      var items = pubs.filter(function (p) { return p.type === g.type && (state.year === "all" || String(p.year) === state.year); });
+      if (!items.length) return;
+      html += '<div class="pub-group"><h3>' + g.label + ' <span class="count">' + items.length + '</span></h3><ol class="pub-list">' +
+        items.map(function (p) {
+          return '<li class="pub-item"><span class="pub-num">[' + p._num + ']</span><div><p class="citation">' + citation(p) + '</p>' +
+            awardBadge(p) + '<div class="pub-actions">' + actions(p) + '</div></div></li>';
+        }).join("") + '</ol></div>';
+    });
+    document.getElementById("pub-groups").innerHTML = html || '<p class="empty-msg">No publications match these filters.</p>';
+  }
+  renderPubs();
+
+  // Copy BibTeX
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (res, rej) {
+      var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy") ? res() : rej(); } catch (e) { rej(e); } finally { document.body.removeChild(ta); }
+    });
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".copy-bib"); if (!b) return;
+    var p = pubs.filter(function (x) { return x.id === b.dataset.id; })[0];
+    copyText(bibtex(p)).then(function () { toast("BibTeX copied to clipboard"); }, function () { toast("Copy failed. Please try again."); });
+  });
+
+  // Research-theme paper counts
+  document.querySelectorAll(".theme-meta[data-tag]").forEach(function (el) {
+    var n = pubs.filter(function (p) { return (p.tags || []).indexOf(el.dataset.tag) >= 0; }).length;
+    el.textContent = n ? n + " related paper" + (n > 1 ? "s" : "") : "Ongoing work";
+  });
+
+  /* ---------- Active nav link on scroll ---------- */
+  var navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+  var map = {};
+  navLinks.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
+  // sections without their own nav entry highlight the nearest one
+  map.methods = map.publications;
+  if ("IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove("active"); a.removeAttribute("aria-current"); });
+        var a = map[en.target.id]; if (a) { a.classList.add("active"); a.setAttribute("aria-current", "true"); }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("main section[id]").forEach(function (s) { spy.observe(s); });
+
+    /* ---------- Fade-in ---------- */
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var reveals = document.querySelectorAll(".reveal");
+    if (reduce) reveals.forEach(function (el) { el.classList.add("in"); });
+    else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+      reveals.forEach(function (el) { io.observe(el); });
+    }
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
